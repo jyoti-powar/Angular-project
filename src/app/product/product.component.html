@@ -1,0 +1,39 @@
+
+
+<style>
+    table,tr,th {border: 2px solid black; background-color:blanchedalmond;}
+    table{height: 250px; width: 800px; text-align: center;margin-left: 260px; margin-top: 80px;}
+    .tbhead { padding-bottom: 50px; color: darkmagenta; }
+     th{width: 700px;}
+    
+     
+</style>
+<table >
+    <tr class="tbhead">
+        <th>Product Id</th>
+        <th>Product Category</th>
+        <th>Size</th>
+        <th>Color</th>
+        <th>Price</th>
+        <th colspan="2">Update & Delete</th>
+        
+    </tr>
+
+
+    <tr *ngFor="let pr of prdList">
+        <th>{{pr.id}}</th>
+        <th>{{pr.category}}</th>
+        <th>{{pr.size}}</th>
+        <th>{{pr.color}}</th>
+        <th>{{pr.price}}</th>
+        <th><button class="btn btn-warning btn-sm" (click)="onedit(pr._id)">Update</button></th>
+        <th><button class="btn btn-danger btn-sm" (click)="delId(pr._id)">Delete</button></th>
+       
+
+    </tr>
+</table>
+
+<h3>{{delflag}}</h3>
+
+<br><br>
+<a style="margin-left: 600px;" class="btn btn-primary" routerLink="/add-product">Add New Product</a>

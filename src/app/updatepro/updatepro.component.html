@@ -1,0 +1,19 @@
+
+<div style="background-color:rgb(111, 217, 111);">
+    <div style=" height: 500px;  width:550px; background-color: burlywood; margin-left:350px;" >
+    
+        <h2 style="color: red; text-align: center;">Add New Product</h2>
+    <form [formGroup]="prform1" (ngSubmit)="updateprod()" style="padding-top:30px; margin-left:150px;">
+    
+        <input type="number" formControlName="id" placeholder="enter product id"><br><br>
+        <input type="text" formControlName="category" placeholder="enter product category"><br><br>
+        <input type="text" formControlName="size" placeholder="enter product size"><br><br>
+        <input type="text" formControlName="color" placeholder="enter color of product"><br><br>
+        <input type="number" formControlName="price" placeholder="enter price of product"><br><br>
+        <button type="submit">Update Product</button>
+    
+    
+    
+    
+    </form>
+    </div></div>
